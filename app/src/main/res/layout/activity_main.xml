@@ -50,7 +50,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textview_simbolo_real"
         app:layout_constraintStart_toEndOf="@+id/textview_simbolo_real"
-        tools:text="2.916,18" />
+        android:text="2.916,18" />
 
     <ImageView
         android:id="@+id/imageview_foto"
@@ -233,7 +233,7 @@
         android:id="@+id/constraint_layout_segunda_linha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/constraint_layout_primeira_linha"
         app:layout_constraintStart_toStartOf="@+id/constraint_layout_primeira_linha"
         app:layout_constraintTop_toBottomOf="@+id/constraint_layout_primeira_linha"
@@ -390,14 +390,14 @@
 
         <ImageView
             android:id="@+id/imageview_ocultador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@android:drawable/arrow_down_float">
+            android:src="@drawable/ic_mostrar_mais">
 
         </ImageView>
 
