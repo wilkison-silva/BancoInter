@@ -38,7 +38,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textview_saldo_em_conta"
-        app:layout_constraintTop_toBottomOf="@+id/textview_saldo_em_conta"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/textview_saldo_em_conta"/>
 
     <TextView
         android:id="@+id/textview_saldo"
@@ -50,7 +50,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textview_simbolo_real"
         app:layout_constraintStart_toEndOf="@+id/textview_simbolo_real"
-        tools:text="2.916,18" />
+        tools:text="2.916,18"/>
 
     <ImageView
         android:id="@+id/imageview_foto"
@@ -94,27 +94,29 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout_3_icones"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_foto"
+        app:layout_constraintStart_toStartOf="@+id/textview_simbolo_real"
         app:layout_constraintTop_toBottomOf="@+id/textview_mensagem_ultima_atualizacao"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_margin="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/cardview_calendario2"
+            app:layout_constraintEnd_toStartOf="@id/cardview_calendario2"
             app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -149,16 +151,18 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario2"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_margin="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="@id/cardview_calendario"
             app:layout_constraintEnd_toStartOf="@id/cardview_calendario3"
             app:layout_constraintStart_toEndOf="@id/cardview_calendario"
-            app:layout_constraintTop_toTopOf="@id/cardview_calendario">
+            app:layout_constraintTop_toTopOf="@id/cardview_calendario"
+            app:layout_constraintWidth_percent="0.3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -193,16 +197,18 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario3"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="@id/cardview_calendario2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cardview_calendario2"
-            app:layout_constraintTop_toTopOf="@id/cardview_calendario2">
+            app:layout_constraintTop_toTopOf="@id/cardview_calendario2"
+            app:layout_constraintWidth_percent="0.3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -237,5 +243,157 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_layout_3_icones"
+        app:layout_constraintStart_toStartOf="@+id/constraint_layout_3_icones"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_3_icones"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_calendario4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cardview_calendario5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageview_calendario4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    android:text="Calendário"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageview_calendario4" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_calendario5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardview_calendario4"
+            app:layout_constraintEnd_toStartOf="@id/cardview_calendario6"
+            app:layout_constraintStart_toEndOf="@id/cardview_calendario4"
+            app:layout_constraintTop_toTopOf="@id/cardview_calendario4"
+            app:layout_constraintWidth_percent="0.3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageview_calendario5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    android:text="Calendário"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageview_calendario5" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_calendario6"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardview_calendario5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardview_calendario5"
+            app:layout_constraintTop_toTopOf="@id/cardview_calendario5"
+            app:layout_constraintWidth_percent="0.3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageview_calendario6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    android:text="Calendário"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageview_calendario6" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
