@@ -38,7 +38,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textview_saldo_em_conta"
-        app:layout_constraintTop_toBottomOf="@+id/textview_saldo_em_conta"/>
+        app:layout_constraintTop_toBottomOf="@+id/textview_saldo_em_conta" />
 
     <TextView
         android:id="@+id/textview_saldo"
@@ -50,7 +50,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textview_simbolo_real"
         app:layout_constraintStart_toEndOf="@+id/textview_simbolo_real"
-        tools:text="2.916,18"/>
+        tools:text="2.916,18" />
 
     <ImageView
         android:id="@+id/imageview_foto"
@@ -58,14 +58,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/foto_redonda"
+        android:background="@drawable/ic_photo_circle"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/textview_saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textview_saldo"
         app:layout_constraintTop_toTopOf="@+id/textview_saldo_em_conta" />
-
 
     <TextView
         android:id="@+id/textview_mensagem_ultima_atualizacao"
@@ -79,28 +78,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_simbolo_real"
         app:layout_constraintVertical_bias="0" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textview_mensagem_ultima_atualizacao"
-        app:layout_constraintEnd_toStartOf="@+id/imageview_foto"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textview_saldo"
-        app:layout_constraintTop_toTopOf="@+id/textview_saldo"
-        app:srcCompat="@android:drawable/ic_menu_view" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout_3_icones"
+        android:id="@+id/constraint_layout_primeira_linha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@+id/imageview_foto"
         app:layout_constraintStart_toStartOf="@+id/textview_simbolo_real"
         app:layout_constraintTop_toBottomOf="@+id/textview_mensagem_ultima_atualizacao"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario"
@@ -148,7 +135,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario2"
             android:layout_width="0dp"
@@ -194,7 +180,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_calendario3"
             android:layout_width="0dp"
@@ -245,12 +230,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_segunda_linha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/constraint_layout_3_icones"
-        app:layout_constraintStart_toStartOf="@+id/constraint_layout_3_icones"
-        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_3_icones"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_layout_primeira_linha"
+        app:layout_constraintStart_toStartOf="@+id/constraint_layout_primeira_linha"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_primeira_linha"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.cardview.widget.CardView
@@ -392,8 +378,29 @@
 
         </androidx.cardview.widget.CardView>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_ocultador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_segunda_linha">
+
+        <ImageView
+            android:id="@+id/imageview_ocultador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/arrow_down_float">
+
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
