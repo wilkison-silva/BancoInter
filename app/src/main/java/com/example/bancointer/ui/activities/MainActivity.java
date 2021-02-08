@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageViewOcultador = findViewById(R.id.imageview_ocultador);
-        constraintLayout_segunda_linha = findViewById(R.id.constraint_layout_segunda_linha);
+        constraintLayout_segunda_linha = findViewById(R.id.constraint_layout_expansivel);
         constraintLayout_ocultador = findViewById(R.id.constraint_layout_ocultador);
 
         imageViewOcultador.setOnClickListener(new View.OnClickListener() {
