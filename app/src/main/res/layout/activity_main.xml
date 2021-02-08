@@ -113,24 +113,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
                     android:id="@+id/imageview_calendario"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
-                    android:elevation="8dp"
-                    android:src="@drawable/ic_transferencia"
                     android:background="@drawable/icone_background_redondo"
+                    android:elevation="8dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_transferencia"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Transferência"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -160,24 +162,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
                     android:id="@+id/imageview_calendario2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
-                    android:elevation="8dp"
                     android:background="@drawable/icone_background_redondo"
+                    android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_baseline_credit_card_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Catões"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -207,24 +211,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
                     android:id="@+id/imageview_calendario3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
-                    android:elevation="8dp"
                     android:background="@drawable/icone_background_redondo"
+                    android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_invesvimento"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Investimento"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -268,24 +274,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_gift"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Gift"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -316,24 +324,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario5"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_pagamento"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Pagamento"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -364,18 +374,19 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario6"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_imovel"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -383,6 +394,7 @@
                     android:elevation="8dp"
                     android:text="Finaciamento Imobiliário"
                     android:textAlignment="center"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -415,24 +427,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario7"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_agendamento"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Agendamentos"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -461,24 +475,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario9"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_ajuda"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Calendário"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -506,24 +522,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:padding="10dp"
-                    android:background="@drawable/icone_background_redondo"
                     android:id="@+id/imageview_calendario8"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
+                    android:background="@drawable/icone_background_redondo"
                     android:elevation="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_token"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="8dp"
                     android:text="Token"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
