@@ -94,6 +94,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void transicaoParaEsconder(int gone, int p) {
         TransitionManager.beginDelayedTransition(constraintLayout_segunda_linha,
