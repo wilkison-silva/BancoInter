@@ -18,15 +18,6 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
     private List<Cartao> list;
     private final Context context;
-    //private OnItemClickListener onItemClickListener;
-
-    //public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-    //    this.onItemClickListener = onItemClickListener;
-    //}
-
-    public void atualizar(){
-        notifyDataSetChanged();
-    }
 
     @Override
     public int getItemViewType(int position) {
@@ -67,8 +58,6 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     @Override
     public void onBindViewHolder(@NonNull CartaoViewHolder holder, int position) {
 
-//        Cartao cartao = this.list.get(position);
-//        holder.vincularDados(cartao);
     }
 
     @Override
@@ -84,55 +73,6 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         public CartaoViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView;
-            /*itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-              //      onItemClickListener.OnItemClick(cartao, CartaoViewHolder.this.getAdapterPosition());
-                }
-            });
-             */
         }
-
-        public void vincularDados(Cartao cartao) {
-            this.cartao = cartao;
-//            mostrarDescricao(view, cartao);
-//            mostrarCategoria(view, cartao);
-//            mostrarLogin(view, cartao);
-//            mostrarSenha(view, cartao);
-//            configurarCorCortao(view, cartao);
-        }
-
-        /*
-        private void configurarCorCortao(View view, Cartao cartao) {
-            CardView cardView = view.findViewById(R.id.cardview_simulacao);
-            cardView.setCardBackgroundColor(Color.parseColor(cartao.getCorCartao()));
-        }
-
-        private void mostrarSenha(View view, Cartao cartao) {
-            TextView textViewSenha = view.findViewById(R.id.cardview_textview_senha);
-            textViewSenha.setText(cartao.getSenha());
-            textViewSenha.setTextColor(Color.parseColor(cartao.getCorTexto()));
-        }
-
-        private void mostrarLogin(View view, Cartao cartao) {
-            TextView textViewLogin = view.findViewById(R.id.cardview_textview_login);
-            textViewLogin.setText(cartao.getLogin());
-            textViewLogin.setTextColor(Color.parseColor(cartao.getCorTexto()));
-        }
-
-        private void mostrarCategoria(View view, Cartao cartao) {
-            TextView textViewCategoria = view.findViewById(R.id.cardview_textview_categoria);
-            textViewCategoria.setText(cartao.getCategoria());
-            textViewCategoria.setTextColor(Color.parseColor(cartao.getCorTexto()));
-        }
-
-        private void mostrarDescricao(View view, Cartao cartao) {
-            TextView textViewDescricao = view.findViewById(R.id.cardview_textview_descricao);
-            textViewDescricao.setText(cartao.getDescricao());
-            textViewDescricao.setTextColor(Color.parseColor(cartao.getCorTexto()));
-        }
-
-         */
-
     }
 }
