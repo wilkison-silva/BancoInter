@@ -54,6 +54,18 @@
         android:text="2.916,18" />
 
     <ImageView
+        android:id="@+id/imageViewEye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textview_mensagem_ultima_atualizacao"
+        app:layout_constraintStart_toEndOf="@+id/textview_saldo"
+        app:layout_constraintTop_toTopOf="@+id/textview_saldo"
+        android:src="@drawable/ic_eye_open"
+        app:tint="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <ImageView
         android:id="@+id/imageview_foto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -398,7 +410,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageview_calendario6" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageview_calendario6"
+                    android:gravity="center_horizontal" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -577,16 +590,29 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageViewEye"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textview_mensagem_ultima_atualizacao"
-        app:layout_constraintStart_toEndOf="@+id/textview_saldo"
-        app:layout_constraintTop_toTopOf="@+id/textview_saldo"
-        android:src="@drawable/ic_eye_open"
-        app:tint="@color/white"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_slider"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_ocultador"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewCartoes"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_recycler_view_portabilidade">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

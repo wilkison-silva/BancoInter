@@ -3,6 +3,11 @@ package com.example.bancointer.ui.activities;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -15,22 +20,57 @@ import android.widget.TextView;
 
 import com.example.bancointer.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView imageViewOcultador;
     private ConstraintLayout constraintLayout_segunda_linha;
     private ConstraintLayout constraintLayout_ocultador;
+    private ConstraintLayout constraintLayout_slider;
     private ImageView imageViewEye;
     private boolean mostrarSaldo = true;
     private TextView textViewSaldo;
+
+    private RecyclerView recyclerView;
+    private AdapterRecyclerView adapterRecyclerView;
+    private List<Cartao> listaCartoes;
+    LinearLayoutManager horizontalLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        listaCartoes = new ArrayList<>();
+        listaCartoes.add(new Cartao());
+        listaCartoes.add(new Cartao());
+        listaCartoes.add(new Cartao());
+        adapterRecyclerView = new AdapterRecyclerView(listaCartoes, this);
+        recyclerView = findViewById(R.id.recyclerviewCartoes);
+
+        horizontalLayout
+                = new LinearLayoutManager(
+                MainActivity.this,
+                LinearLayoutManager.HORIZONTAL,
+                false);
+
+        recyclerView.setLayoutManager(horizontalLayout);
+        recyclerView.setAdapter(adapterRecyclerView);
+
+//        SnapHelper helper = new LinearSnapHelper();
+        SnapHelper helper = new PagerSnapHelper();
+//        SnappingRecyclerView helper = new SnappingRecyclerView(this);
+        helper.attachToRecyclerView(recyclerView);
+//        adapterRecyclerView.atualizar();
+        Log.d("RecyclerView", "Lista: " + adapterRecyclerView.getItemCount());
+
         imageViewOcultador = findViewById(R.id.imageview_ocultador);
         constraintLayout_segunda_linha = findViewById(R.id.constraint_layout_expansivel);
         constraintLayout_ocultador = findViewById(R.id.constraint_layout_ocultador);
+        constraintLayout_slider = findViewById(R.id.constraint_layout_slider);
 
         imageViewOcultador.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -45,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(constraintLayout_ocultador,
                             new AutoTransition());
                     imageViewOcultador.setImageResource(R.drawable.ic_mostrar_mais);
+                    TransitionManager.beginDelayedTransition(constraintLayout_slider,
+                            new AutoTransition());
                 }
                 else {
                     TransitionManager.beginDelayedTransition(constraintLayout_segunda_linha,
@@ -53,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(constraintLayout_ocultador,
                             new AutoTransition());
                     imageViewOcultador.setImageResource(R.drawable.ic_mostrar_menos);
+                    TransitionManager.beginDelayedTransition(constraintLayout_slider,
+                            new AutoTransition());
                 }
             }
         });
